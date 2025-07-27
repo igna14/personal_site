@@ -16,17 +16,21 @@ You need a bicycle, not a jumbo jet. This setup gives you a fast, maintainable s
 ## Project Structure
 
 ```
-├── index.html              # Homepage
+├── index.html              # Homepage with section-based layout
 ├── blog.html              # Blog index (generated)
-├── about.html             # About page
-├── style.css              # Global styles
+├── about.html             # About page with personal content
+├── style.css              # Global styles (Inter + Charter fonts)
+├── favicon.png            # Site favicon
+├── logo.png               # Navigation logo  
+├── header.html            # Reusable header component
+├── header.js              # Header component loader
 ├── posts/
-│   ├── hello-world.md
-│   ├── second-post.md
-│   └── hello-world.html   # Generated from .md
-├── generate_blog.py       # Blog generator script
+│   ├── hello-world.md     # Blog posts with frontmatter
+│   ├── just-keep-up.md    # Supports AI-assisted tagging
+│   └── *.html             # Generated HTML from markdown
+├── generate_blog.py       # Enhanced blog generator
 └── .github/workflows/
-    └── deploy.yml         # Auto-deployment
+    └── deploy.yml         # Auto-deployment workflow
 ```
 
 ## Quick Start
@@ -321,13 +325,15 @@ jobs:
 
 ## Blog Post Format
 
-**posts/my-first-post.md**
+**Enhanced frontmatter with AI-assisted tagging and datetime support:**
+
 ```markdown
 ---
 title: "Building Better Software"
-date: "2025-01-15"
+date: "2025-01-27 14:30"  # Supports time for precise ordering
 excerpt: "Lessons learned from shipping products that matter"
 published: true
+ai_assisted: false        # AI transparency tagging
 ---
 
 # Main Content
@@ -339,6 +345,11 @@ Content with **bold** and *italic* formatting.
 
 `Code snippets` work too.
 ```
+
+**Key Features:**
+- **AI Tagging**: Set `ai_assisted: true` to show transparency badge
+- **DateTime Support**: Use `"2025-01-27 14:30"` for precise post ordering (displays as date only)
+- **Draft Support**: Set `published: false` to exclude from generation
 
 ## Usage
 
@@ -354,14 +365,15 @@ Content with **bold** and *italic* formatting.
 
 ### Local Development
 ```bash
-# Generate blog locally
-python generate_blog.py
+# Generate blog locally (processes markdown, updates components)
+python3 generate_blog.py
 
-# Serve locally (Python 3)
-python -m http.server 8000
+# Serve locally for testing
+python3 -m http.server 8000
+# Visit http://localhost:8000
 
-# Or with PHP
-php -S localhost:8000
+# Edit header across all pages
+# Just edit header.html - changes appear everywhere
 ```
 
 ## Repository Setup
