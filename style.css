@@ -1,0 +1,191 @@
+* { box-sizing: border-box; }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Charter:ital,wght@0,400;0,700;1,400&display=swap');
+
+body { 
+  font-family: "Charter", "Bitstream Charter", Georgia, serif;
+  line-height: 1.65;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  color: #1a202c;
+  background: #ffffff;
+}
+
+h1 { 
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600; 
+  font-size: 2.25rem; 
+  margin-bottom: 2rem;
+  color: #1a202c;
+  letter-spacing: -0.025em;
+}
+
+h2 { 
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500; 
+  font-size: 1.375rem; 
+  margin: 2.5rem 0 1rem;
+  color: #2d3748;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin: 1.5rem 0 0.5rem;
+  color: #2d3748;
+}
+
+p { 
+  color: #4a5568; 
+  margin-bottom: 1.25rem;
+}
+
+a { 
+  color: #EB3349; 
+  text-decoration: none; 
+  transition: color 0.15s ease;
+}
+
+a:hover { 
+  color: #d32f2f; 
+  text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.post-list { 
+  list-style: none; 
+  padding: 0; 
+  margin: 2rem 0;
+}
+
+.post-list li { 
+  margin-bottom: 1.5rem; 
+  padding: 1.25rem; 
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.15s ease;
+}
+
+.post-list li:hover { 
+  background: #f7fafc;
+  border-color: #cbd5e0;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.post-date { 
+  font-size: 0.875rem; 
+  color: #718096;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+header { 
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+nav a { 
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  margin-right: 2rem; 
+  font-weight: 500;
+  color: #4a5568;
+}
+
+nav a:hover {
+  color: #EB3349;
+}
+
+/* Section spacing and hierarchy */
+section {
+  margin-bottom: 3.5rem;
+}
+
+section:last-child {
+  margin-bottom: 2rem;
+}
+
+.intro {
+  margin-bottom: 4rem;
+}
+
+.intro p {
+  font-size: 1.125rem;
+  color: #2d3748;
+}
+
+/* Contact section styling */
+.contact, .about-intro, .background, .approach {
+  padding-bottom: 1rem;
+}
+
+/* Enhanced typography hierarchy */
+main {
+  margin-top: 1rem;
+}
+
+/* Logo and navigation styling */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.logo-link:hover {
+  text-decoration: none !important;
+}
+
+.logo {
+  height: 28px;
+  width: auto;
+  transition: opacity 0.15s ease;
+  margin-right: 0.75rem;
+}
+
+.site-name {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #1a202c;
+  letter-spacing: -0.01em;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  margin-right: 0;
+}
+
+/* AI-assisted tag styling */
+.ai-tag {
+  display: inline-block;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #718096;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.125rem 0.5rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}

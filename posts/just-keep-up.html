@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Keep Up</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        // Load header component for blog posts
+        async function loadHeader() {
+            try {
+                const response = await fetch('../header.html');
+                const headerHTML = await response.text();
+                // Update paths for subdirectory
+                const updatedHTML = headerHTML
+                    .replace(/src="logo\.png"/g, 'src="../logo.png"')
+                    .replace(/href="index\.html"/g, 'href="../index.html"')
+                    .replace(/href="blog\.html"/g, 'href="../blog.html"')
+                    .replace(/href="about\.html"/g, 'href="../about.html"');
+                document.getElementById('header-placeholder').outerHTML = updatedHTML;
+            } catch (error) {
+                console.error('Error loading header:', error);
+            }
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadHeader);
+        } else {
+            loadHeader();
+        }
+    </script>
+    
+    <main>
+        <h1>Just Keep Up</h1>
+        <p class="post-date">2025-01-27</p>
+        
+        <p>When we were growing at our fastest at Monzo there was a sense that just keeping up with the company growth would be more than enough to set you apart in the market.</p>
+
+<p>Turns out, when your company is doubling in size every 3-6 months cycle after cycle, the statement is right. If you keep up, your impact, output, contributions double too.</p>
+
+<p>If you're in the first 100 employees, and keep up the pace of growth for 3-4 cycles, you can be in the top 10% of performers (still in the top 100). Just keep up. It's simple, but not easy - and, like any framework, this is an oversimplification, but it's good enough to hold.</p>
+
+<p>That's kind of how it feels with #AI today. If you just keep up with the rate of change and innovation, you're going to stay ahead of the curve. The rate of change is faster than most of us have seen in our lifetimes. Most people don't have the capacity to keep up. Most people won't even want to. Most people will get left behind the innovation curve.</p>
+
+<p>ChatGPT will be table stakes, mediocre, and (for most people) it will be enough.</p>
+
+<p>Think about a group of surfers waiting for a big wave. Everyone paddles to ride it, some give up quickly, most bail or fall right as the wave starts to crash.</p>
+
+<p>Riding the wave through it's highest point, where it's fastest and scariest is as tough as it'll get. If you manage to get past that, chances are you'll go further, smoother.</p>
+    </main>
+</body>
+</html>

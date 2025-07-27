@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        // Load header component for blog posts
+        async function loadHeader() {
+            try {
+                const response = await fetch('../header.html');
+                const headerHTML = await response.text();
+                // Update paths for subdirectory
+                const updatedHTML = headerHTML
+                    .replace(/src="logo\.png"/g, 'src="../logo.png"')
+                    .replace(/href="index\.html"/g, 'href="../index.html"')
+                    .replace(/href="blog\.html"/g, 'href="../blog.html"')
+                    .replace(/href="about\.html"/g, 'href="../about.html"');
+                document.getElementById('header-placeholder').outerHTML = updatedHTML;
+            } catch (error) {
+                console.error('Error loading header:', error);
+            }
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadHeader);
+        } else {
+            loadHeader();
+        }
+    </script>
+    
+    <main>
+        <h1>Hello World</h1>
+        <p class="post-date">2025-01-27</p>
+        
+        <h2>Welcome to My Site</h2>
+
+<p>This is my first blog post using a simple, no-framework approach to building a personal website.</p>
+
+<h2>Why Simple?</h2>
+
+<p>Sometimes you need a bicycle, not a jumbo jet. This setup gives me:</p>
+
+<p>- <strong>Fast loading</strong> - no JavaScript frameworks
+- <strong>Easy to maintain</strong> - I understand every line
+- <strong>Portable</strong> - copy files anywhere
+- <strong>Version controlled</strong> - full history in git</p>
+
+<h2>What's Next?</h2>
+
+<p>I'll be sharing notes on building better software, lessons learned, and my development process.</p>
+
+<p>Stay tuned for more posts!</p>
+    </main>
+</body>
+</html>
