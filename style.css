@@ -147,7 +147,7 @@ nav {
 }
 
 .logo {
-  height: 28px;
+  height: 24px;
   width: auto;
   transition: opacity 0.15s ease;
   margin-right: 0.75rem;
@@ -155,7 +155,7 @@ nav {
 
 .site-name {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.25rem;
   color: #1a202c;
   letter-spacing: -0.01em;
