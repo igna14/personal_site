@@ -1,16 +1,17 @@
-# Personal Website Setup Guide
+# Ignacio Semerene's Personal Website
 
-A minimal personal website with integrated blog - no frameworks, no build tools, just HTML, CSS, and a simple Python script.
+A minimal personal website with integrated blog - no frameworks, no build tools, just HTML, CSS, and a simple Python script. Built with a focus on simplicity, speed, and full control.
 
 ## Philosophy
 
 You need a bicycle, not a jumbo jet. This setup gives you a fast, maintainable site that you fully control.
 
 ## Tech Stack
-- **Frontend**: Hand-written HTML + CSS
-- **Blog**: Markdown files + Python script
+- **Frontend**: Hand-written HTML + CSS (Inter + Charter fonts)
+- **Blog**: Markdown files + Python script with AI-assisted tagging
+- **Components**: Header component system with JavaScript loading
 - **Hosting**: GitHub Pages (free)
-- **Deployment**: Git push (automated)
+- **Deployment**: Git push (automated via GitHub Actions)
 
 ## Project Structure
 
