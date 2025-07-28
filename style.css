@@ -39,7 +39,7 @@ h3 {
 }
 
 p { 
-  color: #4a5568; 
+  color: #2d3748; 
   margin-bottom: 1.25rem;
 }
 
@@ -50,7 +50,7 @@ a {
 }
 
 a:hover { 
-  color: #d32f2f; 
+  color: #EB3349; 
   text-decoration: none;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
